@@ -19,7 +19,7 @@ ms.locfileid: "60004225"
 
 Stockage Azure offre des niveaux d’accès différents, ce qui vous permet de stocker des données d’objet blob de la manière la plus rentable. Les niveaux d’accès disponibles sont les suivantes :
 
-- **Hot** - optimisé pour stocker les données fréquemment sollicitées.
+- **Chaud** - optimisé pour stocker les données fréquemment sollicitées.
 - **Froid** - optimisé pour le stockage des données rarement sollicitées et stockées depuis au moins 30 jours.
 - **Archive** - optimisé pour le stockage des données rarement sollicitées et stockées depuis au moins 180 jours avec les conditions de latence flexibles (selon l’ordre des heures).
 
@@ -68,13 +68,13 @@ Le niveau d’accès froid a la réduction des coûts de stockage et les coûts 
 
 Le niveau d’accès archive a le plus faible coût de stockage et les coûts plus élevés de l’extraction de données par rapport aux niveaux chaud et froid. Ce niveau est destiné aux données qui peuvent tolérer plusieurs heures de latence de récupération et restant dans le niveau archive pendant au moins 180 jours.
 
-Bien qu’il soit un objet blob dans stockage archive, les données blob sont hors connexion et ne peut pas être lu, copié, remplacé ou modifié. Vous ne pouvez effectuer des captures instantanées d’un objet blob dans stockage archive. Toutefois, les métadonnées de l’objet blob restent en ligne et disponible, ce qui vous permet de répertorier l’objet blob et ses propriétés. Pour les objets BLOB dans l’archive, les seules opérations valides sont GetBlobProperties, GetBlobMetadata, ListBlobs, SetBlobTier et DeleteBlob.
+Bien qu’il soit un objet blob dans stockage archive, les données blob sont hors connexion et ne peuvent pas être lues, copiées, remplacées ou modifiées. Vous ne pouvez pas effectuer des captures instantanées d’un objet blob dans stockage archive. Toutefois, les métadonnées de l’objet blob restent en ligne et disponible, ce qui vous permet de répertorier l’objet blob et ses propriétés. Pour les objets blob dans l’archive, les seules opérations valides sont GetBlobProperties, GetBlobMetadata, ListBlobs, SetBlobTier et DeleteBlob.
 
 Exemples de scénarios d’utilisation pour le niveau d’accès archive sont les suivantes :
 
 - Sauvegarde à long terme, sauvegarde secondaire et jeux de données d’archivage
 - Données d’origine (brutes) qui doivent être conservées, même après leur traitement sous un format final exploitable (*Par exemple*, des fichiers multimédias bruts après transcodage dans d’autres formats)
-- Données de conformité et d’archivage qui doivent être stockées à long terme et qui sont très rarement sollicitées (*Par exemple*, séquences vidéo de sécurité, anciens clichés de radiographie pour les organismes de santé, les enregistrements audio et les transcriptions de client appelle pour les services financiers)
+- Données de conformité et d’archivage qui doivent être stockées à long terme et qui sont très rarement sollicitées (*Par exemple*, séquences vidéo de sécurité, anciens clichés de radiographie pour les organismes de santé, les enregistrements audio et les transcriptions d'appel client pour les services financiers)
 
 ### <a name="blob-rehydration"></a>Rafraîchissement des objets blob
 
